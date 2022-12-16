@@ -52,8 +52,8 @@ ssh-keygen
 
 ```bash
 dir .ssh
-dir .ssh\id_rsa
-dir .ssh\id_rsa.pub
+type .ssh\id_rsa
+type .ssh\id_rsa.pub
 ```
 
 ### создаем директорию для .ssh на сервере
