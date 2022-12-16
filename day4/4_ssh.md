@@ -51,9 +51,15 @@ ssh-keygen
 ### Посмотрите, как выглядят ключи
 
 ```bash
-ls -al .ssh
-cat .ssg/id_rsa
-cat .ssh/id_rsa.pub
+dir .ssh
+dir .ssh\id_rsa
+dir .ssh\id_rsa.pub
+```
+
+### создаем директорию для .ssh на сервере
+
+```
+ssh studentX@bigdatamasters.ml mkdir .ssh
 ```
 
 ### скопируйте публичный ключ на сервер
@@ -61,13 +67,13 @@ cat .ssh/id_rsa.pub
 В команде ниже подставьте вместо USER имя пользователя насервере, полученного вами.
 
 ```bash
-scp .ssh/id_rsa.pub USER@10.55.55.28:.ssh/authorized_keys
+scp .ssh\id_rsa.pub StudentX@bigdatamasters.ml:.ssh/authorized_keys
 ```
 
 ### попробуйте снова залогиниться
 
 
-`ssh USER@10.55.55.28`
+`ssh StudentX@bigdatamasters.ml`
 
 Сервер не спросит вас пароль - пустит по ключу. Ура!
 
